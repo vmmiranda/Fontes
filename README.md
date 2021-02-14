@@ -5,6 +5,10 @@ Projetos:
 
 WebAPI_Moeda
 
+Descrição Geral:
+
+Serviço que realiza a conversão numa determinada lista de moedas baseados no valor de um produto trazendo os valores convertidos nas demais moedas para o respectivo produto. Além disso foi elaborado o serviço complementar de listar os produtos existentes na base .
+
 Lojas_Proximidade:
 
 Descrição Geral:
