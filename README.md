@@ -29,7 +29,7 @@ Como funciona:
 
 1 - Para se obter as informações de Produtos basta chamar o serviço através da API/Produtos existe uma chamada GET que irá retornar todos os produtos cadastrados na base.
 
-2 - Para se obter informações relacionadas a conversão de Moedas basta chamar o serviço através do API/Moeda passando um objeto do tipo Produto preenchido(informações de ID,Categoria, Nome e Preço) existe uma chamada POST que irá listar todos as moedas a serem convertidas que estão na tabela Moedas_Conversao e a partir dela com o preço que foi informado ela irá fazer uma a uma as conversões retornando assim um objeto com o id do produto , o nome da moeda e o valor convertido na própria moeda.
+2 - Para se obter informações relacionadas a conversão de Moedas basta chamar o serviço através do API/Moeda passando um objeto do tipo Produto preenchido(informações de ID,Categoria, Nome e Preço) existe uma chamada POST que irá listar todos as moedas a serem convertidas que estão na tabela Moedas_Conversao e a partir dela com o preço que foi informado ela irá fazer uma a uma as conversões retornando assim uma liste de objetos com o id do produto , o nome da moeda e o valor convertido na própria moeda.
 
 <b>Lojas_Proximidade:</b>
 
