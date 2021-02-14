@@ -9,7 +9,12 @@ Descrição Geral:
 
 Serviço que realiza a conversão numa determinada lista de moedas baseados no valor de um produto trazendo os valores convertidos nas demais moedas para o respectivo produto. Além disso foi elaborado o serviço complementar de listar os produtos existentes na base .
 
-Contextualizando a solução foram criadas 3 tabelas no Sql Server num servidor hospedado na nuvem e foram consumidas pelo serviço. A tabela de Produto que exibe a lista de produtos existentes onde foi criado a funcionalidade que são obtidos os produtos da base via EntityFramework, a tabela de Informacoes_Moeda que foram carregas as informações de paridade e taxas de conversão baseadas nas informações do banco Central  e uma tabela de Moedas_Conversão trazendo uma lista de para quais moedas as conversões serão feitas. 
+Contextualizando a solução foram criadas 3 tabelas no Sql Server num servidor hospedado na nuvem e foram consumidas pelo serviço. A tabela de Produto que exibe a lista de produtos existentes onde foi criado a funcionalidade que são obtidos os produtos da base via EntityFramework.
+
+A tabela de Informacoes_Moeda que foram carregas as informações de paridade e taxas de conversão baseadas nas informações do banco Central  e uma tabela de Moedas_Conversão trazendo uma lista de para quais moedas as conversões serão feitas. Foi feito de maneira convencional a consulta dos dados obtendo-se as informações e para cada valor retornado é calculado a conversão da moeda do valor passado pelo produto.
+
+Existem dois controllers o de Produto que serve para listar os produtos e o de Moeda para realizar a conversão das Moedas.
+
 
 Lojas_Proximidade:
 
