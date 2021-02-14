@@ -1,0 +1,10 @@
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\bin\Debug\Lojas_Proximidade.exe.config
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\bin\Debug\Lojas_Proximidade.exe
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\bin\Debug\Lojas_Proximidade.pdb
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\obj\Debug\Lojas_Proximidade.csprojAssemblyReference.cache
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\obj\Debug\Lojas_Proximidade.FrmBuscaLojas.resources
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\obj\Debug\Lojas_Proximidade.Properties.Resources.resources
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\obj\Debug\Lojas_Proximidade.csproj.GenerateResource.cache
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\obj\Debug\Lojas_Proximidade.csproj.CoreCompileInputs.cache
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\obj\Debug\Lojas_Proximidade.exe
+C:\Users\vitor\source\repos\Algoritmo_Localizacao\Lojas_Proximidade\obj\Debug\Lojas_Proximidade.pdb
