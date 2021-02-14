@@ -11,12 +11,12 @@ Serviço que realiza a conversão numa determinada lista de moedas baseados no v
 
 Contextualizando a solução foram criadas 3 tabelas no Sql Server num servidor hospedado na nuvem e foram consumidas pelo serviço. A tabela de Produto que exibe a lista de produtos existentes onde foi criado a funcionalidade que são obtidos os produtos da base via EntityFramework.
 
-A tabela de Informacoes_Moeda que foram carregas as informações de paridade e taxas de conversão baseadas nas informações do banco Central  e uma tabela de Moedas_Conversão trazendo uma lista de para quais moedas as conversões serão feitas. Foi feito de maneira convencional a consulta dos dados obtendo-se as informações e para cada valor retornado é calculado a conversão da moeda do valor passado pelo produto.
+A tabela de Informacoes_Moeda que foram carregadas as informações de paridade e taxas de conversão baseadas nas informações do banco Central  e uma tabela de Moedas_Conversão trazendo uma lista de para quais moedas as conversões serão feitas. Foi feito de maneira convencional a consulta dos dados obtendo-se as informações e para cada valor retornado é calculado a conversão da moeda do valor passado pelo produto.
 
 Existem dois controllers o de Produto que serve para listar os produtos e o de Moeda para realizar a conversão das Moedas.
 
 
-Lojas_Proximidade:
+<b>Lojas_Proximidade:</b>
 
 Descrição Geral:
 
@@ -32,7 +32,7 @@ Como funciona:
 
 1 - Usuário coloca as informações de plano , lojas e localização atual e clica no botão Calcular .
 
-2 - Então são verificados se oscampos foram preenchidos corretamente tanto no aspecto das restrições , quanto no aspecto de formato numérico e preenchimento com valor.
+2 - Então são verificados se os campos foram preenchidos corretamente tanto no aspecto das restrições , quanto no aspecto de formato numérico e preenchimento com valor.
 
 3 - Caso exista alguma inconsistência é informado ao usuário que o campo não foi preenchido de maneira correta e o usuário pode corrigir a informação.
 
