@@ -73,7 +73,7 @@ namespace Lojas_Proximidade
             string[] arrIndices = null;
 
             arrIndices = parametro_posicoes.Split('}').ToArray();
-            int[,] arrRetorno = new int[arrIndices.Count() < 2 ? 1 : arrIndices.Count() - 2, 2];
+            int[,] arrRetorno = new int[arrIndices.Count() < 3 ? 1 : arrIndices.Count() - 2, 2];
             string[] arrPosicoes = new string[2];
             bool bpassou_primeira_ocorrencia = false;
 
