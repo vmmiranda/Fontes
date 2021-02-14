@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbBaseModelStoreContainer" CdmEntityContainer="dbViagemEntities">
+    <EntitySetMapping Name="Informacoes_Moedas">
+      <EntityTypeMapping TypeName="dbBaseModel.Informacoes_Moedas">
+        <MappingFragment StoreEntitySet="Informacoes_Moedas">
+          <ScalarProperty Name="Cod_Moeda" ColumnName="Cod_Moeda" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Moeda" ColumnName="Moeda" />
+          <ScalarProperty Name="Taxa_Compra" ColumnName="Taxa_Compra" />
+          <ScalarProperty Name="Taxa_Venda" ColumnName="Taxa_Venda" />
+          <ScalarProperty Name="Paridade_Compra" ColumnName="Paridade_Compra" />
+          <ScalarProperty Name="Paridade_Venda" ColumnName="Paridade_Venda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moedas_Conversao">
+      <EntityTypeMapping TypeName="dbBaseModel.Moedas_Conversao">
+        <MappingFragment StoreEntitySet="Moedas_Conversao">
+          <ScalarProperty Name="Cod_Moeda" ColumnName="Cod_Moeda" />
+          <ScalarProperty Name="Moeda" ColumnName="Moeda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="dbBaseModel.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="Id_Produto" ColumnName="Id_Produto" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Preco" ColumnName="Preco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

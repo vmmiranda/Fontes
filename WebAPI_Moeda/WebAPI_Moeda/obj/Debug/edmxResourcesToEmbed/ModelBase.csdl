@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Informacoes_Moedas">
+    <Key>
+      <PropertyRef Name="Cod_Moeda" />
+      <PropertyRef Name="Tipo" />
+      <PropertyRef Name="Moeda" />
+      <PropertyRef Name="Taxa_Compra" />
+      <PropertyRef Name="Taxa_Venda" />
+      <PropertyRef Name="Paridade_Compra" />
+      <PropertyRef Name="Paridade_Venda" />
+    </Key>
+    <Property Name="Cod_Moeda" Type="Int32" Nullable="false" />
+    <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Moeda" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Taxa_Compra" Type="Double" Nullable="false" />
+    <Property Name="Taxa_Venda" Type="Double" Nullable="false" />
+    <Property Name="Paridade_Compra" Type="Double" Nullable="false" />
+    <Property Name="Paridade_Venda" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Moedas_Conversao">
+    <Key>
+      <PropertyRef Name="Cod_Moeda" />
+      <PropertyRef Name="Moeda" />
+    </Key>
+    <Property Name="Cod_Moeda" Type="Int32" Nullable="false" />
+    <Property Name="Moeda" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="Id_Produto" />
+      <PropertyRef Name="Nome" />
+      <PropertyRef Name="Categoria" />
+      <PropertyRef Name="Descricao" />
+      <PropertyRef Name="Preco" />
+    </Key>
+    <Property Name="Id_Produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Categoria" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Descricao" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Preco" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="dbViagemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Informacoes_Moedas" EntityType="Self.Informacoes_Moedas" />
+    <EntitySet Name="Moedas_Conversao" EntityType="Self.Moedas_Conversao" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" />
+  </EntityContainer>
+</Schema>
