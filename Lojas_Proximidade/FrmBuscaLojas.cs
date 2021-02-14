@@ -19,7 +19,7 @@ namespace Lojas_Proximidade
         }
         //Metodo que calcula as Lojas_Proximidade mais proximas em relação ao cliente.
         private void BtnCalcular_Click(object sender, EventArgs e)
-        {              
+        {
             //Verifica se os campos estão preenchidos
             if (VerificaPreenchimento())
             {
@@ -73,7 +73,7 @@ namespace Lojas_Proximidade
             string[] arrIndices = null;
 
             arrIndices = parametro_posicoes.Split('}').ToArray();
-            int[,] arrRetorno = new int[arrIndices.Count() - 2, 2];
+            int[,] arrRetorno = new int[arrIndices.Count() < 2 ? 1 : arrIndices.Count() - 2, 2];
             string[] arrPosicoes = new string[2];
             bool bpassou_primeira_ocorrencia = false;
 
@@ -95,8 +95,8 @@ namespace Lojas_Proximidade
 
                     arrPosicoes = retorno_indice.Split(',').ToArray();
 
-                    arrRetorno[i, 0] = int.Parse(arrPosicoes[0]);
-                    arrRetorno[i, 1] = int.Parse(arrPosicoes[1]);
+                    arrRetorno[i, 0] = int.Parse(arrPosicoes[0].Trim());
+                    arrRetorno[i, 1] = int.Parse(arrPosicoes[1].Trim());
                 }
 
             }
