@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbViagem.dbo.Informacoes_Moedas' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Informacoes_Moedas">
+          <Key>
+            <PropertyRef Name="Cod_Moeda" />
+            <PropertyRef Name="Tipo" />
+            <PropertyRef Name="Moeda" />
+            <PropertyRef Name="Taxa_Compra" />
+            <PropertyRef Name="Taxa_Venda" />
+            <PropertyRef Name="Paridade_Compra" />
+            <PropertyRef Name="Paridade_Venda" />
+          </Key>
+          <Property Name="Cod_Moeda" Type="int" Nullable="false" />
+          <Property Name="Tipo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Moeda" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Taxa_Compra" Type="float" Nullable="false" />
+          <Property Name="Taxa_Venda" Type="float" Nullable="false" />
+          <Property Name="Paridade_Compra" Type="float" Nullable="false" />
+          <Property Name="Paridade_Venda" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbViagem.dbo.Moedas_Conversao' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Moedas_Conversao">
+          <Key>
+            <PropertyRef Name="Cod_Moeda" />
+            <PropertyRef Name="Moeda" />
+          </Key>
+          <Property Name="Cod_Moeda" Type="int" Nullable="false" />
+          <Property Name="Moeda" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dbViagem.dbo.Produto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Produto">
+          <Key>
+            <PropertyRef Name="Id_Produto" />
+            <PropertyRef Name="Nome" />
+            <PropertyRef Name="Categoria" />
+            <PropertyRef Name="Descricao" />
+            <PropertyRef Name="Preco" />
+          </Key>
+          <Property Name="Id_Produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Categoria" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Preco" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dbBaseModelStoreContainer">
+          <EntitySet Name="Informacoes_Moedas" EntityType="Self.Informacoes_Moedas" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Informacoes_Moedas].[Cod_Moeda] AS [Cod_Moeda], 
+    [Informacoes_Moedas].[Tipo] AS [Tipo], 
+    [Informacoes_Moedas].[Moeda] AS [Moeda], 
+    [Informacoes_Moedas].[Taxa_Compra] AS [Taxa_Compra], 
+    [Informacoes_Moedas].[Taxa_Venda] AS [Taxa_Venda], 
+    [Informacoes_Moedas].[Paridade_Compra] AS [Paridade_Compra], 
+    [Informacoes_Moedas].[Paridade_Venda] AS [Paridade_Venda]
+    FROM [dbo].[Informacoes_Moedas] AS [Informacoes_Moedas]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Moedas_Conversao" EntityType="Self.Moedas_Conversao" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Moedas_Conversao].[Cod_Moeda] AS [Cod_Moeda], 
+    [Moedas_Conversao].[Moeda] AS [Moeda]
+    FROM [dbo].[Moedas_Conversao] AS [Moedas_Conversao]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Produto" EntityType="Self.Produto" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Produto].[Id_Produto] AS [Id_Produto], 
+    [Produto].[Nome] AS [Nome], 
+    [Produto].[Categoria] AS [Categoria], 
+    [Produto].[Descricao] AS [Descricao], 
+    [Produto].[Preco] AS [Preco]
+    FROM [dbo].[Produto] AS [Produto]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Informacoes_Moedas">
+          <Key>
+            <PropertyRef Name="Cod_Moeda" />
+            <PropertyRef Name="Tipo" />
+            <PropertyRef Name="Moeda" />
+            <PropertyRef Name="Taxa_Compra" />
+            <PropertyRef Name="Taxa_Venda" />
+            <PropertyRef Name="Paridade_Compra" />
+            <PropertyRef Name="Paridade_Venda" />
+          </Key>
+          <Property Name="Cod_Moeda" Type="Int32" Nullable="false" />
+          <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Moeda" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Taxa_Compra" Type="Double" Nullable="false" />
+          <Property Name="Taxa_Venda" Type="Double" Nullable="false" />
+          <Property Name="Paridade_Compra" Type="Double" Nullable="false" />
+          <Property Name="Paridade_Venda" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Moedas_Conversao">
+          <Key>
+            <PropertyRef Name="Cod_Moeda" />
+            <PropertyRef Name="Moeda" />
+          </Key>
+          <Property Name="Cod_Moeda" Type="Int32" Nullable="false" />
+          <Property Name="Moeda" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Produto">
+          <Key>
+            <PropertyRef Name="Id_Produto" />
+            <PropertyRef Name="Nome" />
+            <PropertyRef Name="Categoria" />
+            <PropertyRef Name="Descricao" />
+            <PropertyRef Name="Preco" />
+          </Key>
+          <Property Name="Id_Produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Categoria" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descricao" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Preco" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dbViagemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Informacoes_Moedas" EntityType="Self.Informacoes_Moedas" />
+          <EntitySet Name="Moedas_Conversao" EntityType="Self.Moedas_Conversao" />
+          <EntitySet Name="Produto" EntityType="Self.Produto" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbBaseModelStoreContainer" CdmEntityContainer="dbViagemEntities">
+          <EntitySetMapping Name="Informacoes_Moedas">
+            <EntityTypeMapping TypeName="dbBaseModel.Informacoes_Moedas">
+              <MappingFragment StoreEntitySet="Informacoes_Moedas">
+                <ScalarProperty Name="Cod_Moeda" ColumnName="Cod_Moeda" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Moeda" ColumnName="Moeda" />
+                <ScalarProperty Name="Taxa_Compra" ColumnName="Taxa_Compra" />
+                <ScalarProperty Name="Taxa_Venda" ColumnName="Taxa_Venda" />
+                <ScalarProperty Name="Paridade_Compra" ColumnName="Paridade_Compra" />
+                <ScalarProperty Name="Paridade_Venda" ColumnName="Paridade_Venda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Moedas_Conversao">
+            <EntityTypeMapping TypeName="dbBaseModel.Moedas_Conversao">
+              <MappingFragment StoreEntitySet="Moedas_Conversao">
+                <ScalarProperty Name="Cod_Moeda" ColumnName="Cod_Moeda" />
+                <ScalarProperty Name="Moeda" ColumnName="Moeda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Produto">
+            <EntityTypeMapping TypeName="dbBaseModel.Produto">
+              <MappingFragment StoreEntitySet="Produto">
+                <ScalarProperty Name="Id_Produto" ColumnName="Id_Produto" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Preco" ColumnName="Preco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
