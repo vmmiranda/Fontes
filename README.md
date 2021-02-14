@@ -15,6 +15,21 @@ A tabela de Informacoes_Moeda que foram carregadas as informações de paridade 
 
 Existem dois controllers o de Produto que serve para listar os produtos e o de Moeda para realizar a conversão das Moedas.
 
+Estrutura da Aplicação :
+
+WebApi_Servicos: Projeto que contêm as informações da camada da aplicação do serviço nela estão contigos os controllers de Produtos e Moeda
+
+Servico_Service: Projeto que contêm as regras de negócio da aplicação .
+
+Servico_Domain: Projeto que contêm as entidades e interfaces da aplicação.
+
+Servico_Infra.Data: Projeto que contêm informações relacionadas ao acesso a base de dados SQL.
+
+Como funciona:
+
+1 - Para se obter as informações de Produtos basta chamar o serviço através da API/Produtos existe uma chamada GET que irá retornar todos os produtos cadastrados na base.
+
+2 - Para se obter informações relacionadas a conversão de Moedas basta chamar o serviço através do API/Moeda passando um objeto do tipo Produto preenchido(informações de ID,Categoria, Nome e Preço) existe uma chamada POST que irá listar todos as moedas a serem convertidas que estão na tabela Moedas_Conversao e a partir dela com o preço que foi informado ela irá fazer uma a uma as conversões retornando assim um objeto com o id do produto , o nome da moeda e o valor convertido na própria moeda.
 
 <b>Lojas_Proximidade:</b>
 
